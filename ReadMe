@@ -1,0 +1,16 @@
+ViewPage2探索
+
+二、介绍必要基础知识
+1、ViewPager 与 ViewPager2 部分对比
+
+ViewPager	                ViewPager 2
+PagerAdapter	            RecyclerView.Adapter
+FragmentStatePagerAdapter	FragmentStateAdapter
+addPageChangeListener	    registerOnPageChangeCallback
+无	                        从右到左 (RTL) 的布局支持
+无	                        垂直方向支持
+无	                        停用用户输入的功能（setUserInputEnabled、isUserInputEnabled）
+
+
+2、部分基础知识
+ViewPager 2 底层是用 RecycleView 实现

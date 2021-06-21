@@ -1,10 +1,13 @@
 package com.youshu.viewpager2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.youshu.viewpager2.horizontal.HorizontalVerticalActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
      * 横向滑动
      */
     public void onHorizontalScroll(View view) {
-        startActivity(new Intent());
+        startActivity(HorizontalVerticalActivity.newInstance(this, ViewPager2.ORIENTATION_HORIZONTAL));
+    }
+
+    /**
+     * 纵向滑动
+     */
+    public void onVerticalScroll(View view) {
+        startActivity(HorizontalVerticalActivity.newInstance(this, ViewPager2.ORIENTATION_VERTICAL));
     }
 }

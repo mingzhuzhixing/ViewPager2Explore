@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.youshu.viewpager2.horizontal.HorizontalVerticalActivity;
+import com.youshu.viewpager2.radiogroup.RadioGroupActivity;
+import com.youshu.viewpager2.tablayout.TabLayoutActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,5 +31,19 @@ public class MainActivity extends AppCompatActivity {
      */
     public void onVerticalScroll(View view) {
         startActivity(HorizontalVerticalActivity.newInstance(this, ViewPager2.ORIENTATION_VERTICAL));
+    }
+
+    /**
+     * viewpager2与tablayout使用
+     */
+    public void onRadioGroup(View view) {
+        startActivity(new Intent(this, RadioGroupActivity.class));
+    }
+
+    /**
+     * viewpager2与tablayout使用
+     */
+    public void onTabLayout(View view) {
+        startActivity(new Intent(this, TabLayoutActivity.class));
     }
 }
